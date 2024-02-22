@@ -1,6 +1,6 @@
-# K6 Load Test for Gitlab Issues API
+# K6 Performance Test - Gitlab Issues API
 
-k6 Load testing scripts which implements Smoke, Load, Stress and Soak tests scenarios on Gitlab Issues API https://docs.gitlab.com/ee/api/issues.html.
+k6 performance testing scripts which implements Smoke, Load, Stress and Soak tests scenarios on Gitlab Issues API https://docs.gitlab.com/ee/api/issues.html.
 Additionally it stores the results in Influxdb an could be visualized in Grafana.
 
 ## Prerequisites
@@ -23,7 +23,7 @@ brew install k6
 
 1. Up the `docker-compose.yaml` file with:
 
-```shell
+```
 docker-compose -d up
 ```
 
