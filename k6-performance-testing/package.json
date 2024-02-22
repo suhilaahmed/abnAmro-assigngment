@@ -4,7 +4,10 @@
   "description": "Performance testing framework to test Gitlab Issues API",
   "main": "issuesApi.js",
   "scripts": {
-    "test": "k6 run -e test_mode=smoke  --out influxdb=http://localhost:8086/myk6db issuesApi.js -e token=glpat-Nm3o218N_GbNQWrQvoNb "
+    "test-smoke": "k6 run -e test_mode=smoke  --out influxdb=http://localhost:8086/myk6db issuesApi.js -e token=glpat-Nm3o218N_GbNQWrQvoNb",
+    "test-load":"k6 run -e test_mode=load  --out influxdb=http://localhost:8086/myk6db issuesApi.js -e token=glpat-Nm3o218N_GbNQWrQvoNb",
+    "test-stress":"k6 run -e test_mode=stress  --out influxdb=http://localhost:8086/myk6db issuesApi.js -e token=glpat-Nm3o218N_GbNQWrQvoNb",
+    "test-soak":"k6 run -e test_mode=soak  --out influxdb=http://localhost:8086/myk6db issuesApi.js -e token=glpat-Nm3o218N_GbNQWrQvoNb",
   },
   "author": "Suhila Ahmed",
   "license": "ISC"
