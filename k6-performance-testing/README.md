@@ -46,10 +46,10 @@ Its default username and password is: `admin`
 cd files
 ```
 
-Run k6 with the desired test mode. Wait for the test to get accomplished.
+Run k6 with the desired test mode. For example running k6 with smoke mode.
 
 ```
-npm run test
+npm run test-smoke
 ```
 
 You can choose the *test_mode* value according to the below options.
