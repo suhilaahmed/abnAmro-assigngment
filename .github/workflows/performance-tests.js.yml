@@ -20,4 +20,4 @@ jobs:
 
 
     - name: Run k6 test
-      run: k6 run -e test_mode=smoke issuesApi.js -e token=${{secrets.PRIVATE_ACCESS_TOKEN}}
+      run: k6 run -e test_mode=${{secrets.test_mode}} issuesApi.js -e token=${{secrets.PRIVATE_ACCESS_TOKEN}}
