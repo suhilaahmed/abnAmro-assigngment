@@ -13,11 +13,15 @@ jobs:
     - name: Checkout code
       uses: actions/checkout@v2
 
-    - name: Set up k6
+    - name: Run up k6
       uses: k6io/action@v0.1
+      env: 
+        test_mode: ${{secrets.test_mode}}
+        token: ${{secrets.PRIVATE_ACCESS_TOKEN}}
       with:
         filename: ./k6-performance-testing/issuesApi.js
 
 
-    - name: Run k6 test
-      run: k6 run -e test_mode=${{secrets.test_mode}} issuesApi.js -e token=${{secrets.PRIVATE_ACCESS_TOKEN}}
+    # - name: Run k6 test
+    #   uses: k6io/action@v0.1
+    #   run: k6 run -e test_mode=${{secrets.test_mode}} issuesApi.js -e token=${{secrets.PRIVATE_ACCESS_TOKEN}}
