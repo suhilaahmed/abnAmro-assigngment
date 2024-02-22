@@ -47,9 +47,9 @@ jobs:
         GITLAB_NAME: ${{ secrets.name }}
       run: | 
         touch .env
-        echo private_token="$PRIVATE_ACCESS_TOKEN" >> .env
-        echo projectId="$PROJECT_ID" >> .env
-        echo username="$GITLAB_USER_NAME" >> .env
-        echo name="$GITLAB_NAME" >> .env
+        echo PRIVATE_ACCESS_TOKEN="$PRIVATE_ACCESS_TOKEN" >> .env
+        echo PROJECT_ID="$PROJECT_ID" >> .env
+        echo GITLAB_USER_NAME="$GITLAB_USER_NAME" >> .env
+        echo GITLAB_NAME="$GITLAB_NAME" >> .env
         cat .env
     - run: npm run test
