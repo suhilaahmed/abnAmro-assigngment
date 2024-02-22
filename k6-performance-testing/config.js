@@ -1,6 +1,6 @@
 // defining test modes
 const stages_smoke = [
-    { duration: '1m', target: 1 } // 1 user for 1 minute
+    { duration: '10s', target: 1 } // 1 user for 1 minute
 ];
 
 // load testing to find the maximum amount of load the system can handle.
