@@ -24,7 +24,8 @@ PROJECT_ID
 ```
 The private access token can be found in your personal gitlab account.
 The user name and the name are associated with you account.
-The project Id is the Id the appears next to the project name on gitlab.
+
+The project Id is the Id the appears next to the project name on gitlab, In order to have a project Id you need to created a trail project with untlimate access on Gitlab.
 
 <img width="437" alt="Screenshot 2022-07-18 at 00 06 43" src="https://user-images.githubusercontent.com/9402421/179426619-02f15c92-9c50-49b3-8eda-e2c867f45f04.png">
 
