@@ -43,13 +43,13 @@ Its default username and password is: `admin`
 
 2. change directory to files:
 
-```shell
+```
 cd files
 ```
 
 Run k6 with the desired test mode. Wait for the test to get accomplished.
 
-```shell
+```
 npm run test
 ```
 
