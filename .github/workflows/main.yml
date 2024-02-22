@@ -1,0 +1,51 @@
+# This workflow will do a clean installation of node dependencies, cache/restore them, build the source code and run tests across different versions of node
+# For more information see: https://help.github.com/actions/language-and-framework-guides/using-nodejs-with-github-actions
+
+name: Playwright API CI
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: [14.17]
+
+    defaults:
+      run:
+       working-directory: ./playwright-api-testing
+        
+    steps:
+    - uses: actions/checkout@v3
+    - name: Use Node.js ${{ matrix.node-version }}
+      uses: actions/setup-node@v3
+      with:
+        node-version: ${{ matrix.node-version }}
+        cache: 'npm'
+        cache-dependency-path: '**/package-lock.json'
+    - run: npm install
+    
+    - name: Install Playwright browsers
+    - run: npx playwright install
+    
+    - name: 'Create env file'
+      env:
+        PRIVATE_ACCESS_TOKEN: ${{ secrets.private_token }}
+        PROJECT_ID: ${{ secrets.projectId }}
+        GITLAB_USER_NAME: ${{ secrets.username }}
+        GITLAB_NAME: ${{ secrets.name }}
+      run: | 
+        touch .env
+        echo private_token="$PRIVATE_ACCESS_TOKEN" >> .env
+        echo projectId="$PROJECT_ID" >> .env
+        echo username="$GITLAB_USER_NAME" >> .env
+        echo name="$GITLAB_NAME" >> .env
+        cat .env
+    - run: npm run test
