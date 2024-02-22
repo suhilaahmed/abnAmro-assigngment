@@ -1,0 +1,24 @@
+name: k6 Load Testing
+
+on: [push]
+
+jobs:
+  loadTest:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+         working-directory: ./k6-performance-testing
+    
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    - name: Set up k6
+      run: |
+        sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys 379CE192D401AB61
+        echo "deb https://dl.bintray.com/loadimpact/deb stable main" | sudo tee -a /etc/apt/sources.list
+        sudo apt-get update
+        sudo apt-get install k6
+
+    - name: Run k6 test
+      run: npm run test-smoke
