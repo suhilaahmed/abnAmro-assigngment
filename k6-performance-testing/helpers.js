@@ -15,6 +15,6 @@ export function make_random_word(length) {
 //Define constant variables 
 export const test_mode = __ENV.test_mode;  // smoke, load, stress, soak
 export const base_url = config["base_url"]; // base_url of the site defined in config
-export const stages = config[test_mode]["stages"] // defining stages used in options
-export const  projectId = config["projectId"]
-export const private_access_token = __ENV.token
+export const stages = config[test_mode]["stages"]; // defining stages used in options
+export const projectId = config["projectId"];
+export const private_access_token = __ENV.token;
