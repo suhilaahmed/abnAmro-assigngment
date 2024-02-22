@@ -20,4 +20,4 @@ jobs:
 
 
     - name: Run k6 test
-      run: npm run test-smoke
+      run: k6 run -e test_mode=smoke issuesApi.js -e token=$PRIVATE_ACCESS_TOKEN
