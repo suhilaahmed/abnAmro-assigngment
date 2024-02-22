@@ -64,5 +64,3 @@ You can choose the *test_mode* value according to the below options.
 - **soak**: Would the system last for a long time(normally hours to days) under normal conditions? It’s working for 15min under normal condition in the load test but is feasible for a much longer time?
 
 3. Now you can get back to the imported [grafana dashboard](http://localhost:3000) and see the results.
-
-![results](screenshots/results.png).
