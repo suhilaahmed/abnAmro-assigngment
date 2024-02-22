@@ -50,7 +50,7 @@ cd files
 Run k6 with the desired test mode. Wait for the test to get accomplished.
 
 ```shell
-k6 run -e test_mode=smoke --out influxdb=http://localhost:8086/myk6db test.js
+npm run test
 ```
 
 You can choose the *test_mode* value according to the below options.
