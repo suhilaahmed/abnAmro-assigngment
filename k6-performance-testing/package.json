@@ -1,0 +1,11 @@
+{
+  "name": "k6-performance-testing",
+  "version": "1.0.0",
+  "description": "Performance testing framework to test Gitlab Issues API",
+  "main": "issuesApi.js",
+  "scripts": {
+    "test": "k6 run -e test_mode=smoke  --out influxdb=http://localhost:8086/myk6db issuesApi.js -e token=glpat-Nm3o218N_GbNQWrQvoNb "
+  },
+  "author": "Suhila Ahmed",
+  "license": "ISC"
+}

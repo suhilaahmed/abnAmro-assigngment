@@ -1,0 +1,23 @@
+{
+  "name": "playwright-api-testing",
+  "version": "1.0.0",
+  "description": "automated tests framework that will cover the CRUD operations based on Gitlab Issues API",
+  "main": "index.js",
+  "scripts": {
+    "test": "playwright test --config=api.config.ts --project=Chromium",
+    "test-with-allure": "playwright test --config=api.config.ts --project=Chromium --reporter=line,allure-playwright"
+  },
+  "author": "Suhila Ahmed",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.4.4",
+    "moment": "^2.30.1",
+    "prettier": "^3.2.5"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.41.2",
+    "@types/node": "^20.11.19",
+    "allure-commandline": "^2.27.0",
+    "allure-playwright": "^2.12.2"
+  }
+}
