@@ -32,8 +32,7 @@ You should be able to see Grafana dashboard on http://localhost:3000
 Its default username and password is: `admin`
 
 2.  Create a data source with below configurations:
-
-![influx-config](screenshots/influx-config.png)
+![influx-config](https://github.com/suhilaahmed/abnAmro-assigngment/assets/9402421/0b454747-3abc-4d53-9fab-cdf312aef585)
 
 2.  Import the pre-configured Exa dashboard by id: `15080` or by the [link](https://grafana.com/grafana/dashboards/15080)
 
