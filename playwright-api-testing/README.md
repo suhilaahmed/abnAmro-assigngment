@@ -30,7 +30,17 @@ The project Id is the Id the appears next to the project name on gitlab, In orde
 <img width="437" alt="Screenshot 2022-07-18 at 00 06 43" src="https://user-images.githubusercontent.com/9402421/179426619-02f15c92-9c50-49b3-8eda-e2c867f45f04.png">
 
 ## Run tests
+1. Clone the repository
+
+2. change directory to files:
+
+```shell
+cd files
+```
+3. set up your .env file in the root directory of the repository.
+
 After setting up you .env file, now you are ready to run the tests.
+
 ### Run tests without allure reports
 In the terminal of your IDE run the following command: 
 
