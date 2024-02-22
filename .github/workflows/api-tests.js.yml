@@ -41,15 +41,15 @@ jobs:
     
     - name: 'Create env file'
       env:
-        PRIVATE_ACCESS_TOKEN: ${{ secrets.private_token }}
-        PROJECT_ID: ${{ secrets.projectId }}
-        GITLAB_USER_NAME: ${{ secrets.username }}
-        GITLAB_NAME: ${{ secrets.name }}
+        private_token: ${{ secrets.PRIVATE_ACCESS_TOKEN }}
+        projectId: ${{ secrets.PROJECT_ID }}
+        username: ${{ secrets.GITLAB_USER_NAME }}
+        name: ${{ secrets.GITLAB_NAME }}
       run: | 
         touch .env
-        echo PRIVATE_ACCESS_TOKEN="$PRIVATE_ACCESS_TOKEN" >> .env
-        echo PROJECT_ID="$PROJECT_ID" >> .env
-        echo GITLAB_USER_NAME="$GITLAB_USER_NAME" >> .env
-        echo GITLAB_NAME="$GITLAB_NAME" >> .env
+        echo PRIVATE_ACCESS_TOKEN="$private_token" >> .env
+        echo PROJECT_ID="$projectId" >> .env
+        echo GITLAB_USER_NAME="$username" >> .env
+        echo GITLAB_NAME="$name" >> .env
         cat .env
     - run: npm run test
