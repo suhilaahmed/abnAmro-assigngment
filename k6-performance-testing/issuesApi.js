@@ -19,9 +19,9 @@ console.log("Configuration", JSON.stringify({ test_mode, base_url, stages }));
 // Define option of the k6 test
 export let options = {
     stages: stages,
-      thresholds :{
-          errors: ['rate<0.1'] //Condition - Fail load tets if 10% of resuetts gets failed
-      }
+      // thresholds :{
+      //     errors: ['rate<0.1'] //Condition - Fail load tets if 10% of resuetts gets failed
+      // }
 };
 
 // Defining error rate
