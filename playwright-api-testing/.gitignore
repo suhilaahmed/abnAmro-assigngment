@@ -1,7 +1,6 @@
 ### CUSTOM ###
 
 *_built*
-package-lock.json
 coverage/
 
 # Created by https://www.gitignore.io/api/lua,osx,node,less,sass,vuejs,react,linux,stylus,windows,angular,visualstudiocode
